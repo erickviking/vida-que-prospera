@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Vida que Prospera — Mentoria Vanessa Rocha</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "surface-dim": "#131313",
+        "on-secondary-container": "#b7b5b4",
+        "on-error": "#690005",
+        "surface-variant": "#353534",
+        "on-surface-variant": "#d0c5b2",
+        "on-surface": "#e5e2e1",
+        "surface": "#131313",
+        "surface-container-lowest": "#0e0e0e",
+        "surface-container-low": "#1c1b1b",
+        "surface-container": "#201f1f",
+        "surface-container-high": "#2a2a2a",
+        "surface-container-highest": "#353534",
+        "primary": "#e6c364",
+        "primary-container": "#c9a84c",
+        "primary-fixed-dim": "#e6c364",
+        "on-primary": "#3d2e00",
+        "on-primary-container": "#503d00",
+        "secondary": "#c8c6c5",
+        "secondary-container": "#474746",
+        "outline": "#99907e",
+        "outline-variant": "#4d4637",
+        "background": "#131313",
+        "on-background": "#e5e2e1",
+        "surface-tint": "#e6c364",
+        "inverse-surface": "#e5e2e1",
+        "inverse-on-surface": "#313030",
+        "inverse-primary": "#755b00",
+        "error": "#ffb4ab",
+        "error-container": "#93000a",
+      },
+      borderRadius: {
+        DEFAULT: "0px",
+        lg: "0px",
+        xl: "0px",
+        full: "9999px",
+      },
+      fontFamily: {
+        headline: ["Noto Serif"],
+        body: ["Manrope"],
+        label: ["Manrope"],
+      },
+    },
+  },
+}
+</script>
+<style>
+  body {
+    background-color: #131313;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+  }
+  .gold-glow {
+    background: radial-gradient(circle at center, rgba(230,195,100,0.05) 0%, rgba(19,19,19,0) 70%);
+  }
+  .gold-glow-strong {
+    background: radial-gradient(circle at center, rgba(230,195,100,0.08) 0%, rgba(19,19,19,0) 70%);
+  }
+  .signature-gold {
+    background: linear-gradient(135deg, #E6C364 0%, #C9A84C 100%);
+  }
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  }
+  .editorial-line {
+    width: 1px;
+    background: #c9a84c;
+  }
+  html { scroll-behavior: smooth; }
+  ::selection { background: #C9A84C; color: #3d2e00; }
+
+  /* Abstract visual replacement for stock images */
+  .abstract-portrait {
+    position: relative;
+    overflow: hidden;
+  }
+  .abstract-portrait::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 80% at 50% 40%, rgba(201,168,76,0.12) 0%, transparent 60%),
+      radial-gradient(ellipse 30% 50% at 30% 60%, rgba(230,195,100,0.06) 0%, transparent 50%),
+      linear-gradient(180deg, #0e0e0e 0%, #1c1b1b 50%, #0e0e0e 100%);
+  }
+  .abstract-portrait::after {
+    content: '';
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    width: 50%;
+    height: 70%;
+    border: 1px solid rgba(201,168,76,0.08);
+  }
+  .abstract-arch {
+    position: relative;
+    overflow: hidden;
+  }
+  .abstract-arch::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(135deg, rgba(201,168,76,0.04) 0%, transparent 40%),
+      linear-gradient(315deg, rgba(201,168,76,0.06) 0%, transparent 50%),
+      linear-gradient(180deg, #2a2a2a 0%, #1c1b1b 100%);
+  }
+  .abstract-person {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1c1b1b 0%, #2a2a2a 100%);
+  }
+  .abstract-person::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 40%, rgba(201,168,76,0.06) 0%, transparent 60%);
+  }
+</style>
+</head>
+<body class="text-on-surface font-body">
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- TOP NAV -->
+<!-- ═══════════════════════════════════════════ -->
+<nav class="fixed top-0 w-full z-50 bg-[#131313]/90 backdrop-blur-xl">
+  <div class="flex justify-between items-center w-full px-6 md:px-12 py-6 mx-auto">
+    <span class="text-xl md:text-2xl font-headline font-bold text-[#C9A84C] uppercase tracking-tighter">Vida que Prospera</span>
+    <div class="hidden md:flex gap-12">
+      <a href="#porque" class="font-headline tracking-tight leading-[1.1] text-[#A0A0A0] hover:text-[#E6C364] transition-colors duration-400">Método</a>
+      <a href="#experiencia" class="font-headline tracking-tight leading-[1.1] text-[#A0A0A0] hover:text-[#E6C364] transition-colors duration-400">Resultados</a>
+      <a href="#diferencial" class="font-headline tracking-tight leading-[1.1] text-[#A0A0A0] hover:text-[#E6C364] transition-colors duration-400">Diferencial</a>
+      <a href="#cta-final" class="font-headline tracking-tight leading-[1.1] text-[#E6C364] border-b border-[#C9A84C] pb-1">Inscrição</a>
+    </div>
+    <a href="https://pagar.me/checkout/SEU-LINK-AQUI" class="signature-gold text-on-primary font-label font-bold px-6 py-2 tracking-widest text-xs transition-transform duration-400 active:scale-95 hidden sm:inline-block">GARANTA SUA VAGA</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- HERO SECTION -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="relative min-h-screen pt-40 pb-32 px-6 md:px-12 overflow-hidden bg-surface-container-lowest">
+  <div class="absolute inset-0 gold-glow pointer-events-none"></div>
+  <div class="max-w-7xl mx-auto relative z-10">
+    <!-- Badge + Sub -->
+    <div class="flex flex-col items-center text-center space-y-8 mb-24">
+      <span class="font-label text-sm uppercase tracking-[0.5em] text-primary">VIDA QUE PROSPERA</span>
+      <p class="font-label text-on-surface-variant max-w-xl text-lg font-light leading-relaxed">
+        8 semanas para avançar com clareza, crescer financeiramente e viver em outro nível
+      </p>
+    </div>
+    <!-- Grid: Headline + Abstract Visual -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+      <div class="md:col-span-8 space-y-12">
+        <h1 class="font-headline text-5xl md:text-7xl lg:text-8xl leading-[1.1] tracking-tight">
+          Não é sobre fazer mais… <br/>
+          <span class="italic font-normal">é sobre começar a ver resultado</span> no que você faz.
+        </h1>
+        <p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl leading-relaxed">
+          Quando existe clareza e direção, suas decisões melhoram, suas ações ganham força… e o dinheiro começa a responder.
+        </p>
+        <div class="pt-8">
+          <a href="https://pagar.me/checkout/SEU-LINK-AQUI" class="signature-gold text-on-primary font-label font-extrabold px-12 py-5 text-sm tracking-[0.2em] uppercase transition-all duration-400 hover:brightness-110 active:scale-95 shadow-2xl inline-block">
+            Garanta sua vaga
+          </a>
+        </div>
+      </div>
+      <div class="md:col-span-4 relative aspect-[3/4] abstract-portrait">
+        <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent z-10"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- EDITORIAL QUOTE BREAK -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="py-32 md:py-40 bg-surface flex flex-col items-center justify-center text-center px-6">
+  <div class="editorial-line h-[80px] md:h-[120px] mb-12"></div>
+  <blockquote class="font-headline text-2xl md:text-4xl lg:text-5xl max-w-4xl leading-snug italic text-on-surface">
+    "A prosperidade não é um evento isolado, é o resultado inevitável de uma mente que parou de hesitar."
+  </blockquote>
+  <div class="editorial-line h-[80px] md:h-[120px] mt-12"></div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- POR QUE ISSO IMPORTA -->
+<!-- ═══════════════════════════════════════════ -->
+<section id="porque" class="py-32 md:py-40 bg-surface-container-low px-6 md:px-12">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-start">
+    <div class="space-y-12">
+      <div class="flex items-center gap-4">
+        <div class="w-10 h-[1px] bg-primary"></div>
+        <span class="font-label uppercase tracking-widest text-xs text-primary">Por que isso importa</span>
+      </div>
+      <h2 class="font-headline text-5xl md:text-6xl leading-tight">Todo mundo <br/> quer crescer.</h2>
+      <div class="font-body text-on-surface-variant text-lg leading-loose space-y-6 max-w-md">
+        <p>O crescimento real não acontece no barulho. Ele acontece na estrutura invisível das suas rotinas e na precisão das suas escolhas diárias.</p>
+        <p>Nesta mentoria, removemos o excesso para que restem apenas os movimentos que realmente geram tração e elevação.</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 gap-12 py-6 md:py-12">
+      <div class="flex items-start gap-8 group">
+        <span class="material-symbols-outlined text-primary text-3xl mt-1">track_changes</span>
+        <div class="space-y-2">
+          <h3 class="font-label font-bold text-lg text-on-surface uppercase tracking-tight">Suas escolhas ficam mais assertivas</h3>
+          <p class="font-body text-sm text-on-surface-variant/80">Decidir com base em visão, não em urgência.</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-8 group">
+        <span class="material-symbols-outlined text-primary text-3xl mt-1">trending_up</span>
+        <div class="space-y-2">
+          <h3 class="font-label font-bold text-lg text-on-surface uppercase tracking-tight">Suas oportunidades aumentam</h3>
+          <p class="font-body text-sm text-on-surface-variant/80">Onde outros veem crise, você enxerga o próximo degrau.</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-8 group">
+        <span class="material-symbols-outlined text-primary text-3xl mt-1">auto_awesome</span>
+        <div class="space-y-2">
+          <h3 class="font-label font-bold text-lg text-on-surface uppercase tracking-tight">Sua forma de agir muda</h3>
+          <p class="font-body text-sm text-on-surface-variant/80">O refinamento da execução que separa quem tenta de quem conquista.</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-8 group border-t border-outline-variant/20 pt-12">
+        <span class="material-symbols-outlined text-primary text-3xl mt-1">payments</span>
+        <div class="space-y-2">
+          <h3 class="font-label font-bold text-lg text-on-surface uppercase tracking-tight">Os resultados começam a aparecer</h3>
+          <p class="font-body text-sm text-on-surface-variant/80">Consistência que se traduz em números reais.</p>
+          <p class="font-headline italic text-primary text-xl mt-4">Inclusive no financeiro.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- O QUE VOCÊ EXPERIMENTA -->
+<!-- ═══════════════════════════════════════════ -->
+<section id="experiencia" class="py-32 md:py-40 px-6 md:px-24 bg-surface overflow-hidden">
+  <div class="max-w-7xl mx-auto">
+    <div class="mb-24">
+      <span class="font-label text-[10px] uppercase tracking-[0.2em] text-primary mb-4 block">Resultados Tangíveis</span>
+      <h2 class="font-headline text-4xl md:text-6xl leading-tight max-w-2xl">
+        Ao longo dessas 8 semanas, você começa a perceber:
+      </h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-0">
+      <div class="lg:col-span-3 border border-outline-variant/30 p-12 bg-surface-container-low flex flex-col justify-between min-h-[280px] group hover:bg-surface-container transition-colors duration-500">
+        <span class="material-symbols-outlined text-primary text-4xl">lightbulb</span>
+        <p class="font-body text-xl md:text-2xl font-light text-secondary">Mais clareza sobre o que realmente gera resultado</p>
+      </div>
+      <div class="lg:col-span-3 border border-outline-variant/30 p-12 bg-surface-container-low flex flex-col justify-between min-h-[280px] group hover:bg-surface-container transition-colors duration-500">
+        <span class="material-symbols-outlined text-primary text-4xl">shield</span>
+        <p class="font-body text-xl md:text-2xl font-light text-secondary">Mais segurança para agir e se posicionar</p>
+      </div>
+      <div class="lg:col-span-2 border border-outline-variant/30 p-12 bg-surface-container-low flex flex-col justify-between min-h-[280px] group hover:bg-surface-container transition-colors duration-500">
+        <span class="material-symbols-outlined text-primary text-4xl">sync</span>
+        <p class="font-body text-xl md:text-2xl font-light text-secondary">Mais constância nas suas ações</p>
+      </div>
+      <div class="lg:col-span-2 border border-outline-variant/30 p-12 bg-surface-container-low flex flex-col justify-between min-h-[280px] group hover:bg-surface-container transition-colors duration-500">
+        <span class="material-symbols-outlined text-primary text-4xl">trending_up</span>
+        <p class="font-body text-xl md:text-2xl font-light text-secondary">Mais oportunidades surgindo</p>
+      </div>
+      <div class="lg:col-span-2 border border-outline-variant/30 p-12 bg-surface-container-low flex flex-col justify-between min-h-[280px] group hover:bg-surface-container transition-colors duration-500">
+        <span class="material-symbols-outlined text-primary text-4xl">payments</span>
+        <p class="font-body text-xl md:text-2xl font-light text-secondary">Mais dinheiro entrando com mais naturalidade</p>
+      </div>
+    </div>
+    <div class="mt-20 flex flex-col items-center text-center">
+      <div class="editorial-line h-16 mb-8"></div>
+      <p class="font-headline italic text-primary text-2xl md:text-3xl tracking-tight">
+        "A sensação de crescimento real — não só esforço."
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- BENTO GRID (EDITORIAL AUTHORITY) -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="py-32 md:py-40 bg-surface px-6 md:px-12">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-[800px]">
+    <!-- Large card -->
+    <div class="md:col-span-2 md:row-span-2 bg-surface-container-high relative overflow-hidden group abstract-arch">
+      <div class="absolute bottom-12 left-12 right-12 z-10">
+        <h4 class="font-headline text-3xl md:text-4xl mb-4">A Curadoria do Sucesso</h4>
+        <p class="font-body text-on-surface-variant text-sm max-w-sm uppercase tracking-widest leading-loose">Método exclusivo baseado em princípios de alta performance e filosofia aplicada.</p>
+      </div>
+    </div>
+    <!-- Top right -->
+    <div class="md:col-span-2 md:row-span-1 bg-surface-container relative p-12 flex flex-col justify-end">
+      <div class="absolute top-12 right-12">
+        <span class="material-symbols-outlined text-outline text-6xl">architecture</span>
+      </div>
+      <h4 class="font-headline text-2xl mb-2 italic">Estrutura Irretocável</h4>
+      <p class="font-body text-on-surface-variant text-xs uppercase tracking-widest">Acompanhamento contínuo por 8 semanas de imersão total.</p>
+    </div>
+    <!-- Bottom left -->
+    <div class="md:col-span-1 md:row-span-1 bg-primary p-12 flex flex-col justify-between min-h-[200px]">
+      <span class="font-headline text-5xl text-on-primary">01</span>
+      <span class="font-label font-bold text-on-primary text-xs uppercase tracking-[0.2em]">Exclusividade</span>
+    </div>
+    <!-- Bottom right -->
+    <div class="md:col-span-1 md:row-span-1 bg-surface-container-highest p-12 flex flex-col justify-between min-h-[200px] border border-primary/10">
+      <span class="font-headline text-5xl text-primary">02</span>
+      <span class="font-label font-bold text-on-surface text-xs uppercase tracking-[0.2em]">Impacto Real</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- METODOLOGIA (8 SEMANAS) -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="py-32 md:py-40 px-6 md:px-24 bg-surface-container-lowest relative">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 md:gap-20">
+    <div class="w-full md:w-1/2">
+      <div class="md:sticky md:top-40">
+        <span class="font-label text-[10px] uppercase tracking-[0.2em] text-outline mb-4 block">A Metodologia</span>
+        <h2 class="font-headline text-5xl md:text-7xl leading-none mb-12">
+          Um processo direto de 8 semanas
+        </h2>
+        <p class="font-body text-lg text-secondary/80 leading-relaxed max-w-md">
+          Para alinhar sua forma de pensar, fortalecer sua direção e impulsionar seus resultados.
+        </p>
+      </div>
+    </div>
+    <div class="w-full md:w-1/2 space-y-16 md:space-y-24">
+      <div class="flex flex-col gap-6 items-start">
+        <div class="flex items-baseline gap-4">
+          <span class="font-headline text-primary-fixed-dim text-5xl md:text-6xl">01.</span>
+          <h3 class="font-headline text-2xl md:text-3xl">Sem excesso.</h3>
+        </div>
+        <p class="text-on-surface-variant font-light text-lg">
+          Filtramos o ruído digital para focar apenas no que move a agulha do seu patrimônio e da sua satisfação pessoal.
+        </p>
+      </div>
+      <div class="flex flex-col gap-6 items-start border-t border-outline-variant/20 pt-12">
+        <div class="flex items-baseline gap-4">
+          <span class="font-headline text-primary-fixed-dim text-5xl md:text-6xl">02.</span>
+          <h3 class="font-headline text-2xl md:text-3xl">Sem teoria desnecessária.</h3>
+        </div>
+        <p class="text-on-surface-variant font-light text-lg">
+          Conceitos testados no campo de batalha da vida real, transformados em estratégia executável.
+        </p>
+      </div>
+      <div class="flex flex-col gap-6 items-start border-t border-outline-variant/20 pt-12">
+        <div class="flex items-baseline gap-4">
+          <span class="font-headline text-primary-fixed-dim text-5xl md:text-6xl">03.</span>
+          <h3 class="font-headline text-2xl md:text-3xl">Com aplicação prática.</h3>
+        </div>
+        <p class="text-on-surface-variant font-light text-lg">
+          Na sua vida e no seu dinheiro. O conhecimento só se torna sabedoria quando é aplicado.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- PRA QUEM É -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="py-32 md:py-40 bg-surface relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 md:px-24">
+    <div class="flex flex-col items-start max-w-3xl">
+      <h2 class="font-headline text-5xl md:text-7xl lg:text-8xl mb-12 leading-none text-primary-fixed-dim">
+        Para quem quer crescer.
+      </h2>
+      <div class="space-y-4">
+        <p class="font-headline text-3xl md:text-4xl lg:text-5xl text-on-surface/80 border-l-2 border-primary pl-8">Ganhar mais.</p>
+        <p class="font-headline text-3xl md:text-4xl lg:text-5xl text-on-surface/80 border-l-2 border-primary/40 pl-8">E construir uma vida que reflita esse crescimento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- DIFERENCIAL -->
+<!-- ═══════════════════════════════════════════ -->
+<section id="diferencial" class="py-40 md:py-60 px-6 md:px-24 bg-surface-container-lowest gold-glow-strong relative">
+  <div class="max-w-5xl mx-auto text-center">
+    <span class="font-label text-[12px] uppercase tracking-[0.3em] text-primary mb-10 block">O Diferencial</span>
+    <p class="font-body text-xl md:text-2xl text-secondary mb-12 font-light">Aqui você não aprende só a fazer.</p>
+    <h2 class="font-headline text-4xl md:text-6xl lg:text-8xl leading-tight">
+      Você aprende a <span class="italic text-primary">se posicionar</span> de um jeito que o resultado vem como consequência.
+    </h2>
+    <div class="mt-24">
+      <a href="https://pagar.me/checkout/SEU-LINK-AQUI" class="signature-gold text-on-primary font-label font-extrabold px-10 md:px-16 py-6 text-sm tracking-widest uppercase hover:scale-105 active:scale-95 transition-all duration-500 shadow-2xl inline-block">
+        GARANTIR MINHA VAGA NA MENTORIA
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- FRASES DE IMPACTO -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="min-h-screen bg-surface-container-lowest flex flex-col justify-center px-6 md:px-24 py-32 md:py-40 overflow-hidden">
+  <div class="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-y-16 md:gap-y-32">
+    <div class="md:col-start-1 md:col-span-8">
+      <h2 class="font-headline text-4xl md:text-7xl lg:text-8xl text-primary-container leading-tight tracking-tighter">
+        Dinheiro responde a quem tem direção.
+      </h2>
+    </div>
+    <div class="md:col-start-7 md:col-span-5 md:pt-12">
+      <p class="font-body text-xl md:text-3xl lg:text-4xl text-on-surface leading-snug font-light italic opacity-80">
+        Quem cresce por dentro, prospera por fora.
+      </p>
+    </div>
+    <div class="md:col-start-3 md:col-span-9">
+      <h2 class="font-headline text-3xl md:text-6xl lg:text-7xl text-white leading-tight tracking-tighter">
+        Não é sobre trabalhar mais… é sobre avançar certo.
+      </h2>
+    </div>
+    <div class="md:col-start-2 md:col-span-3 self-center">
+      <p class="font-label text-primary text-xs md:text-sm uppercase tracking-[0.3em] font-bold border-l border-primary-container/30 pl-6 py-2">
+        CLAREZA AUMENTA RESULTADO.
+      </p>
+    </div>
+    <div class="md:col-start-5 md:col-span-8 md:text-right">
+      <h2 class="font-headline text-4xl md:text-7xl lg:text-8xl text-primary-container leading-tight tracking-tighter">
+        Prosperidade não é sorte. É alinhamento.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- CTA FINAL -->
+<!-- ═══════════════════════════════════════════ -->
+<section id="cta-final" class="relative py-32 md:py-48 px-6 overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-b from-surface-container-lowest to-surface z-0"></div>
+  <div class="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
+    <div class="editorial-line h-24 mb-12"></div>
+    <h2 class="font-headline text-2xl md:text-4xl lg:text-5xl text-on-surface leading-snug mb-8">
+      Se você quer ver sua vida financeira avançando de verdade…
+    </h2>
+    <p class="font-headline text-3xl md:text-5xl lg:text-7xl text-primary font-bold tracking-tighter mb-16">
+      Esse é o próximo passo.
+    </p>
+    <a href="https://pagar.me/checkout/SEU-LINK-AQUI" class="signature-gold text-on-primary font-label font-extrabold uppercase tracking-[0.2em] text-sm px-12 md:px-16 py-6 transition-all hover:scale-105 active:scale-95 duration-400 shadow-2xl inline-block">
+      GARANTA SUA VAGA
+    </a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- FECHAMENTO -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="bg-surface-container-lowest py-24 md:py-32 px-6 border-t border-outline-variant/10">
+  <div class="max-w-4xl mx-auto text-center">
+    <p class="font-body text-on-surface-variant text-lg md:text-xl leading-relaxed mb-16 max-w-2xl mx-auto opacity-70">
+      Você pode continuar fazendo do mesmo jeito… ou pode entrar em um nível onde suas decisões começam a gerar mais resultado.
+    </p>
+    <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12">
+      <span class="font-headline text-primary-container text-xl md:text-2xl italic">Mais clareza.</span>
+      <div class="hidden md:block h-4 w-[1px] bg-primary-container/40"></div>
+      <span class="font-headline text-primary-container text-xl md:text-2xl italic">Mais crescimento.</span>
+      <div class="hidden md:block h-4 w-[1px] bg-primary-container/40"></div>
+      <span class="font-headline text-primary-container text-xl md:text-2xl italic font-bold underline underline-offset-8">Mais dinheiro.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- FOOTER -->
+<!-- ═══════════════════════════════════════════ -->
+<footer class="bg-[#0E0E0E] w-full border-t border-[#4D4637]/20 flex flex-col md:flex-row justify-between items-center px-6 md:px-12 py-16 md:py-20 gap-8">
+  <div class="flex flex-col md:items-start items-center gap-4">
+    <p class="font-label uppercase tracking-[0.15em] text-[10px] text-white/40">
+      Vanessa Rocha · <a href="https://instagram.com/vanessarochabr" target="_blank" class="text-[#C9A84C] hover:text-[#E6C364] transition-colors">@vanessarochabr</a>
+    </p>
+    <div class="flex gap-6">
+      <a href="https://instagram.com/vanessarochabr" target="_blank" class="text-[#C9A84C] hover:text-[#E6C364] transition-opacity duration-400 opacity-80">
+        <span class="material-symbols-outlined text-xl">camera_alt</span>
+      </a>
+    </div>
+  </div>
+  <p class="font-label uppercase tracking-[0.15em] text-[10px] text-white/40 text-center md:text-right">
+    © 2026 Vida que Prospera. Todos os direitos reservados.
+  </p>
+</footer>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- FLOATING CTA (Desktop) -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="fixed bottom-12 right-12 z-[100] hidden lg:block" id="floatingCta" style="display:none;">
+  <a href="https://pagar.me/checkout/SEU-LINK-AQUI" class="flex items-center gap-4 bg-surface-container-high/80 backdrop-blur-md px-6 py-4 border border-outline-variant/20 hover:border-primary/50 transition-all">
+    <div class="flex flex-col items-end">
+      <span class="font-label text-[9px] uppercase tracking-widest text-primary font-bold">Turma Aberta</span>
+      <span class="font-label text-[11px] uppercase tracking-widest text-white">Garante sua vaga</span>
+    </div>
+    <div class="bg-primary p-2">
+      <span class="material-symbols-outlined text-on-primary text-xl">north_east</span>
+    </div>
+  </a>
+</div>
+
+<script>
+  // Floating CTA: show after scrolling past hero
+  const floatingCta = document.getElementById('floatingCta');
+  const hero = document.querySelector('section');
+  if (hero && floatingCta) {
+    const obs = new IntersectionObserver(([entry]) => {
+      floatingCta.style.display = entry.isIntersecting ? 'none' : 'block';
+    }, { threshold: 0.1 });
+    obs.observe(hero);
+  }
+</script>
+
+</body>
+</html>
